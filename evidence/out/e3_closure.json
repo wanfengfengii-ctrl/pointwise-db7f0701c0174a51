@@ -1,0 +1,259 @@
+{
+  "alice_closures": [
+    {
+      "bounded_equals_oracle": true,
+      "candidate_device_days": [
+        [
+          "d1",
+          0
+        ],
+        [
+          "d3",
+          0
+        ],
+        [
+          "d4",
+          0
+        ]
+      ],
+      "changed_device_days": [
+        [
+          "d1",
+          0
+        ],
+        [
+          "d3",
+          0
+        ],
+        [
+          "d4",
+          0
+        ]
+      ],
+      "closure_complete": true,
+      "deleted_row_keys": {
+        "assignments": [
+          "a6fadeb815c5b511"
+        ],
+        "events": [
+          "ed487bf3194d3418",
+          "ebdf6e905ab3bee4"
+        ],
+        "holds": [
+          "71f3a5ab2c8d707d"
+        ]
+      },
+      "generation": 1,
+      "groups_to_update": [
+        "east",
+        "west"
+      ],
+      "keys_changed_outside_candidates": [],
+      "oracle": [
+        {
+          "day": 0,
+          "devices": 2,
+          "maximum": 10,
+          "region": "east",
+          "total": 17
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "west",
+          "total": 5
+        }
+      ],
+      "oracle_matches_probe_value": true,
+      "withdrawn": [
+        "alice"
+      ]
+    },
+    {
+      "bounded_equals_oracle": true,
+      "candidate_device_days": [
+        [
+          "d1",
+          0
+        ],
+        [
+          "d3",
+          0
+        ],
+        [
+          "d4",
+          0
+        ]
+      ],
+      "changed_device_days": [
+        [
+          "d1",
+          0
+        ],
+        [
+          "d3",
+          0
+        ],
+        [
+          "d4",
+          0
+        ]
+      ],
+      "closure_complete": true,
+      "deleted_row_keys": {
+        "assignments": [
+          "a6fadeb815c5b511"
+        ],
+        "events": [
+          "ed487bf3194d3418",
+          "ebdf6e905ab3bee4"
+        ],
+        "holds": [
+          "71f3a5ab2c8d707d"
+        ]
+      },
+      "generation": 2,
+      "groups_to_update": [
+        "east",
+        "west"
+      ],
+      "keys_changed_outside_candidates": [],
+      "oracle": [
+        {
+          "day": 0,
+          "devices": 2,
+          "maximum": 10,
+          "region": "east",
+          "total": 19
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "west",
+          "total": 5
+        }
+      ],
+      "oracle_matches_probe_value": true,
+      "withdrawn": [
+        "alice"
+      ]
+    }
+  ],
+  "double_closure_summary": {
+    "bounded_equals_oracle": true,
+    "candidate_device_days": [
+      [
+        "d1",
+        0
+      ],
+      [
+        "d3",
+        0
+      ],
+      [
+        "d4",
+        0
+      ]
+    ],
+    "changed_device_days": [
+      [
+        "d1",
+        0
+      ],
+      [
+        "d3",
+        0
+      ],
+      [
+        "d4",
+        0
+      ]
+    ],
+    "groups_to_update": [
+      "east",
+      "west"
+    ],
+    "oracle": [
+      {
+        "day": 0,
+        "devices": 1,
+        "maximum": 7,
+        "region": "east",
+        "total": 7
+      },
+      {
+        "day": 0,
+        "devices": 1,
+        "maximum": 5,
+        "region": "west",
+        "total": 5
+      }
+    ],
+    "withdrawn": [
+      "alice",
+      "bob"
+    ]
+  },
+  "index_semantics": {
+    "block_dedup": "shared block oid processed once (lake.put INSERT OR IGNORE lake.py:39)",
+    "no_full_scan_at_read": "candidate devices -> timeline index only; whole-history scan count stays at build-time touched blocks",
+    "row_key": "sha256(canonical(row)) prefix - content identity"
+  },
+  "layer": "PROPOSED+ORACLE",
+  "owner_generation_map": {
+    "alice_generations": [
+      1,
+      2
+    ],
+    "alice_row_keys": [
+      "71f3a5ab2c8d707d",
+      "a6fadeb815c5b511",
+      "ebdf6e905ab3bee4",
+      "ed487bf3194d3418"
+    ],
+    "bob_generations": [
+      1,
+      2
+    ],
+    "bob_row_keys": [
+      "61ca6f208b2db87a",
+      "83dff49689c2fe31",
+      "aa705a85622d73c8",
+      "ebdf6e905ab3bee4"
+    ]
+  },
+  "restore_and_reuse": {
+    "alice_expected_gens": [
+      1,
+      2,
+      3
+    ],
+    "alice_hits_after_restore": [
+      1,
+      2,
+      3
+    ],
+    "distinct_block_scans_vs_row_scans": {
+      "blocks_touched": 7,
+      "rows_scanned_during_build": 14,
+      "shared_blocks_not_rescanned": true
+    },
+    "head_after_reuse_publish": 3,
+    "head_immediately_after_restore": 2,
+    "reused_generation_number": 3
+  },
+  "unaffected_version": {
+    "alice_affected_gens_after_clean": [
+      1,
+      2
+    ],
+    "alice_affected_gens_before_clean": [
+      1,
+      2
+    ],
+    "clean_generation": 3,
+    "clean_not_referenced": true
+  }
+}

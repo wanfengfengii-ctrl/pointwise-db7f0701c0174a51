@@ -1,0 +1,469 @@
+{
+  "layer": "OBSERVED+ORACLE+PROPOSED",
+  "timelines": [
+    {
+      "assertions": {
+        "all_versions_apply_cumulative_set": true,
+        "head_unchanged_by_withdrawal": true,
+        "old_plan_publishes_as_gen3": true
+      },
+      "observed_head_after_prepare": 2,
+      "observed_head_after_withdrawal": 2,
+      "observed_reader_today_unfiltered": {
+        "1": [
+          {
+            "day": 0,
+            "devices": 2,
+            "maximum": 11,
+            "region": "east",
+            "total": 18
+          },
+          {
+            "day": 0,
+            "devices": 1,
+            "maximum": 30,
+            "region": "west",
+            "total": 30
+          }
+        ],
+        "2": [
+          {
+            "day": 0,
+            "devices": 2,
+            "maximum": 11,
+            "region": "east",
+            "total": 20
+          },
+          {
+            "day": 0,
+            "devices": 1,
+            "maximum": 30,
+            "region": "west",
+            "total": 30
+          }
+        ],
+        "3": [
+          {
+            "day": 0,
+            "devices": 2,
+            "maximum": 11,
+            "region": "east",
+            "total": 20
+          },
+          {
+            "day": 0,
+            "devices": 2,
+            "maximum": 30,
+            "region": "west",
+            "total": 35
+          }
+        ]
+      },
+      "oracle_controlled_after_confirm": {
+        "1": [
+          {
+            "day": 0,
+            "devices": 2,
+            "maximum": 10,
+            "region": "east",
+            "total": 17
+          },
+          {
+            "day": 0,
+            "devices": 1,
+            "maximum": 5,
+            "region": "west",
+            "total": 5
+          }
+        ],
+        "2": [
+          {
+            "day": 0,
+            "devices": 2,
+            "maximum": 10,
+            "region": "east",
+            "total": 19
+          },
+          {
+            "day": 0,
+            "devices": 1,
+            "maximum": 5,
+            "region": "west",
+            "total": 5
+          }
+        ],
+        "3": [
+          {
+            "day": 0,
+            "devices": 2,
+            "maximum": 10,
+            "region": "east",
+            "total": 19
+          },
+          {
+            "day": 0,
+            "devices": 1,
+            "maximum": 5,
+            "region": "west",
+            "total": 5
+          }
+        ]
+      },
+      "proposed_ack": {
+        "epoch": 1,
+        "status": "CONFIRMED"
+      },
+      "timeline": "A"
+    },
+    {
+      "assertions": {
+        "stale_bytes_today": true
+      },
+      "cached_result_oids": {
+        "1": "ef3e1435e559353babeb2b3db78352a6e20a928ed4ef33d1cfa2a98646a04596",
+        "2": "5d77c25ef6760103054e6e4e79de38986aebb1e012ba98c302b8bc27944cb25a"
+      },
+      "observed_exports_today": {
+        "gen1_via_old_handle": [
+          {
+            "day": 0,
+            "devices": 2,
+            "maximum": 11,
+            "region": "east",
+            "total": 18
+          },
+          {
+            "day": 0,
+            "devices": 1,
+            "maximum": 30,
+            "region": "west",
+            "total": 30
+          }
+        ],
+        "gen2_via_other_reader": [
+          {
+            "day": 0,
+            "devices": 2,
+            "maximum": 11,
+            "region": "east",
+            "total": 20
+          },
+          {
+            "day": 0,
+            "devices": 1,
+            "maximum": 30,
+            "region": "west",
+            "total": 30
+          }
+        ]
+      },
+      "observed_gap_handle_embeds_stale_bytes": {
+        "gen1_via_old_handle": true,
+        "gen2_via_other_reader": true
+      },
+      "oracle_required_under_watermark": {
+        "gen1_via_old_handle": [
+          {
+            "day": 0,
+            "devices": 2,
+            "maximum": 10,
+            "region": "east",
+            "total": 17
+          },
+          {
+            "day": 0,
+            "devices": 1,
+            "maximum": 5,
+            "region": "west",
+            "total": 5
+          }
+        ],
+        "gen2_via_other_reader": [
+          {
+            "day": 0,
+            "devices": 2,
+            "maximum": 10,
+            "region": "east",
+            "total": 19
+          },
+          {
+            "day": 0,
+            "devices": 1,
+            "maximum": 5,
+            "region": "west",
+            "total": 5
+          }
+        ]
+      },
+      "timeline": "B"
+    },
+    {
+      "assertions": {
+        "alice_row_gone": true,
+        "ledger_not_rewound_by_restore": true,
+        "legal_row_kept": true
+      },
+      "observed_current_code_serves_new_alice": true,
+      "observed_head_after_restore": 2,
+      "oracle_image_read_still_filtered": [
+        {
+          "day": 0,
+          "devices": 2,
+          "maximum": 10,
+          "region": "east",
+          "total": 19
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "west",
+          "total": 5
+        }
+      ],
+      "oracle_new_write_alice_removed_legal_kept": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 2,
+          "region": "__UNASSIGNED__",
+          "total": 2
+        }
+      ],
+      "timeline": "C"
+    },
+    {
+      "ack_alice": {
+        "epoch": 1,
+        "status": "CONFIRMED"
+      },
+      "ack_bob": {
+        "epoch": 2,
+        "status": "CONFIRMED"
+      },
+      "assertions": {
+        "alice_epoch1_bob_epoch2": true,
+        "cumulative_matches_contract": true,
+        "replay_returns_same_epoch": true,
+        "subjects_order": true,
+        "watermark_survives_process_reopen": true
+      },
+      "bob_closure_bounded_equals_oracle": true,
+      "bob_merged_closure_candidates": [
+        [
+          "d1",
+          0
+        ],
+        [
+          "d3",
+          0
+        ],
+        [
+          "d4",
+          0
+        ]
+      ],
+      "bob_merged_closure_changed": [
+        [
+          "d1",
+          0
+        ],
+        [
+          "d3",
+          0
+        ],
+        [
+          "d4",
+          0
+        ]
+      ],
+      "crash_prepared_row_status_on_reopen": "PREPARED",
+      "crash_retry_ack": {
+        "epoch": 3,
+        "status": "CONFIRMED"
+      },
+      "cumulative_oracle_gen1": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 7,
+          "region": "east",
+          "total": 7
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "west",
+          "total": 5
+        }
+      ],
+      "final_subjects": [
+        "alice",
+        "bob",
+        "cara"
+      ],
+      "final_watermark": 3,
+      "prepared": [
+        {
+          "epoch": -1,
+          "replayed": false,
+          "status": "PREPARED"
+        },
+        {
+          "epoch": -1,
+          "replayed": false,
+          "status": "PREPARED"
+        }
+      ],
+      "response_lost_replays": [
+        {
+          "epoch": 1,
+          "status": "CONFIRMED"
+        },
+        {
+          "epoch": 2,
+          "status": "CONFIRMED"
+        }
+      ],
+      "timeline": "D"
+    },
+    {
+      "alice_referenced_gens": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "assertions": {
+        "alice_found_in_old_and_new": true,
+        "all_snapshot_gens_covered": true,
+        "closures_complete": true,
+        "each_distinct_row_scanned_once": true
+      },
+      "blocks_touched_before_after_shared_plan": [
+        4,
+        6
+      ],
+      "distinct_rows_indexed": 13,
+      "gen4_oracle": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 1,
+          "region": "__UNASSIGNED__",
+          "total": 1
+        },
+        {
+          "day": 0,
+          "devices": 2,
+          "maximum": 10,
+          "region": "east",
+          "total": 17
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "west",
+          "total": 5
+        }
+      ],
+      "index_covered_generations": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "index_scanned_rows": 13,
+      "interleaved_publish_generations": [
+        3,
+        4
+      ],
+      "timeline": "E"
+    },
+    {
+      "assertions": {
+        "F1_fallback": true,
+        "F2_attribution_or_empty": true,
+        "F2b_west_to_east_fallback": true,
+        "F3_masked_row_must_be_indexed": true,
+        "F4_hold_creates_new_group": true
+      },
+      "steps": {
+        "F1_winner_and_device_replaced": {
+          "gen1_oracle": [
+            {
+              "day": 0,
+              "devices": 1,
+              "maximum": 4,
+              "region": "east",
+              "total": 4
+            }
+          ],
+          "gen2_observed": [
+            {
+              "amount": 9,
+              "at": 5,
+              "device": "d9",
+              "id": "e2",
+              "owners": [
+                "alice"
+              ]
+            }
+          ],
+          "gen2_oracle": []
+        },
+        "F2_latest_assignment_withdrawn": {
+          "observed_before": [
+            {
+              "day": 0,
+              "devices": 1,
+              "maximum": 9,
+              "region": "west",
+              "total": 9
+            }
+          ],
+          "oracle_after": []
+        },
+        "F2b_region_fallback": {
+          "observed_before": [
+            {
+              "day": 0,
+              "devices": 1,
+              "maximum": 6,
+              "region": "west",
+              "total": 6
+            }
+          ],
+          "oracle_after": [
+            {
+              "day": 0,
+              "devices": 1,
+              "maximum": 6,
+              "region": "east",
+              "total": 6
+            }
+          ]
+        },
+        "F3_counterexample_masked_event": {
+          "masked_in_gen4_output": true,
+          "promoted_in_gen5_then_filtered": true
+        },
+        "F4_counterexample_hold_antijoin": {
+          "observed_blocked": [],
+          "oracle_released": [
+            {
+              "day": 0,
+              "devices": 1,
+              "maximum": 7,
+              "region": "__UNASSIGNED__",
+              "total": 7
+            }
+          ]
+        }
+      },
+      "timeline": "F"
+    }
+  ]
+}

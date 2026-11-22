@@ -1,0 +1,194 @@
+{
+  "checks": [
+    {
+      "check": "gen1.without_alice",
+      "ok": true
+    },
+    {
+      "check": "gen1.without_bob",
+      "ok": true
+    },
+    {
+      "check": "gen1.without_both",
+      "ok": true
+    },
+    {
+      "check": "gen1.before_matches_reader",
+      "ok": true
+    },
+    {
+      "check": "gen2.without_alice",
+      "ok": true
+    },
+    {
+      "check": "gen2.without_bob",
+      "ok": true
+    },
+    {
+      "check": "gen2.without_both",
+      "ok": true
+    },
+    {
+      "check": "gen2.before_matches_reader",
+      "ok": true
+    }
+  ],
+  "layer": "OBSERVED+ORACLE",
+  "note": "oracle = whole-row owners filter then frozen query.evaluate; identical to probe.without values by construction.",
+  "observed_summary": {
+    "head_after_restore": 2,
+    "head_before_restore": 3,
+    "image_generation": 2,
+    "pinned_after_publish": [
+      {
+        "day": 0,
+        "devices": 2,
+        "maximum": 11,
+        "region": "east",
+        "total": 18
+      },
+      {
+        "day": 0,
+        "devices": 1,
+        "maximum": 30,
+        "region": "west",
+        "total": 30
+      }
+    ],
+    "replayed_generation": 1
+  },
+  "oracle_counterfactuals": {
+    "1": {
+      "before": [
+        {
+          "day": 0,
+          "devices": 2,
+          "maximum": 11,
+          "region": "east",
+          "total": 18
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 30,
+          "region": "west",
+          "total": 30
+        }
+      ],
+      "without_alice": [
+        {
+          "day": 0,
+          "devices": 2,
+          "maximum": 10,
+          "region": "east",
+          "total": 17
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "west",
+          "total": 5
+        }
+      ],
+      "without_bob": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 7,
+          "region": "east",
+          "total": 7
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 30,
+          "region": "west",
+          "total": 30
+        }
+      ],
+      "without_both": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 7,
+          "region": "east",
+          "total": 7
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "west",
+          "total": 5
+        }
+      ]
+    },
+    "2": {
+      "before": [
+        {
+          "day": 0,
+          "devices": 2,
+          "maximum": 11,
+          "region": "east",
+          "total": 20
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 30,
+          "region": "west",
+          "total": 30
+        }
+      ],
+      "without_alice": [
+        {
+          "day": 0,
+          "devices": 2,
+          "maximum": 10,
+          "region": "east",
+          "total": 19
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "west",
+          "total": 5
+        }
+      ],
+      "without_bob": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 9,
+          "region": "east",
+          "total": 9
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 30,
+          "region": "west",
+          "total": 30
+        }
+      ],
+      "without_both": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 9,
+          "region": "east",
+          "total": 9
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "west",
+          "total": 5
+        }
+      ]
+    }
+  }
+}

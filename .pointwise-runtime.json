@@ -4,10 +4,12 @@
   "setup": [],
   "verify": [
     "python3",
-    "checks.py"
+    "evidence/run.py",
+    "verify"
   ],
   "demo": [
     "python3",
-    "probe.py"
+    "evidence/run.py",
+    "demo"
   ]
 }

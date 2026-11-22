@@ -1,0 +1,379 @@
+{
+  "cases": [
+    {
+      "case": "W1_winner_fallback",
+      "filtered_rows": {
+        "assignments": {
+          "after": 1,
+          "before": 1
+        },
+        "events": {
+          "after": 1,
+          "before": 2
+        },
+        "holds": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "generation": 1,
+      "group_diff": {
+        "added": [],
+        "changed": [
+          [
+            0,
+            "east"
+          ]
+        ],
+        "removed": []
+      },
+      "observed_before": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 9,
+          "region": "east",
+          "total": 9
+        }
+      ],
+      "oracle_after": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 4,
+          "region": "east",
+          "total": 4
+        }
+      ],
+      "withdrawn": [
+        "alice"
+      ]
+    },
+    {
+      "case": "W2_winner_vanishes",
+      "filtered_rows": {
+        "assignments": {
+          "after": 1,
+          "before": 1
+        },
+        "events": {
+          "after": 0,
+          "before": 1
+        },
+        "holds": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "generation": 2,
+      "group_diff": {
+        "added": [],
+        "changed": [],
+        "removed": [
+          [
+            0,
+            "west"
+          ]
+        ]
+      },
+      "observed_before": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 9,
+          "region": "west",
+          "total": 9
+        }
+      ],
+      "oracle_after": [],
+      "withdrawn": [
+        "alice"
+      ]
+    },
+    {
+      "case": "A1_attribution_changes_region",
+      "filtered_rows": {
+        "assignments": {
+          "after": 1,
+          "before": 2
+        },
+        "events": {
+          "after": 1,
+          "before": 1
+        },
+        "holds": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "generation": 3,
+      "group_diff": {
+        "added": [
+          [
+            0,
+            "east"
+          ]
+        ],
+        "changed": [],
+        "removed": [
+          [
+            0,
+            "west"
+          ]
+        ]
+      },
+      "observed_before": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "west",
+          "total": 5
+        }
+      ],
+      "oracle_after": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "east",
+          "total": 5
+        }
+      ],
+      "withdrawn": [
+        "alice"
+      ]
+    },
+    {
+      "case": "A2_becomes_unassigned",
+      "filtered_rows": {
+        "assignments": {
+          "after": 0,
+          "before": 1
+        },
+        "events": {
+          "after": 1,
+          "before": 1
+        },
+        "holds": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "generation": 4,
+      "group_diff": {
+        "added": [
+          [
+            0,
+            "__UNASSIGNED__"
+          ]
+        ],
+        "changed": [],
+        "removed": [
+          [
+            0,
+            "east"
+          ]
+        ]
+      },
+      "observed_before": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "east",
+          "total": 5
+        }
+      ],
+      "oracle_after": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "__UNASSIGNED__",
+          "total": 5
+        }
+      ],
+      "withdrawn": [
+        "alice"
+      ]
+    },
+    {
+      "case": "A3_older_assignment_becomes_decisive",
+      "filtered_rows": {
+        "assignments": {
+          "after": 1,
+          "before": 2
+        },
+        "events": {
+          "after": 1,
+          "before": 1
+        },
+        "holds": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "generation": 5,
+      "group_diff": {
+        "added": [
+          [
+            0,
+            "east"
+          ]
+        ],
+        "changed": [],
+        "removed": [
+          [
+            0,
+            "west"
+          ]
+        ]
+      },
+      "observed_before": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "west",
+          "total": 5
+        }
+      ],
+      "oracle_after": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 5,
+          "region": "east",
+          "total": 5
+        }
+      ],
+      "withdrawn": [
+        "bob"
+      ]
+    },
+    {
+      "case": "H1_hold_removal_creates_output",
+      "filtered_rows": {
+        "assignments": {
+          "after": 1,
+          "before": 1
+        },
+        "events": {
+          "after": 2,
+          "before": 2
+        },
+        "holds": {
+          "after": 0,
+          "before": 1
+        }
+      },
+      "generation": 6,
+      "group_diff": {
+        "added": [
+          [
+            0,
+            "__UNASSIGNED__"
+          ]
+        ],
+        "changed": [],
+        "removed": []
+      },
+      "observed_before": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 3,
+          "region": "east",
+          "total": 3
+        }
+      ],
+      "oracle_after": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 7,
+          "region": "__UNASSIGNED__",
+          "total": 7
+        },
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 3,
+          "region": "east",
+          "total": 3
+        }
+      ],
+      "withdrawn": [
+        "alice"
+      ]
+    },
+    {
+      "case": "D1_shared_row_double_withdrawal_union",
+      "generation": 7,
+      "shared_row_key": "ebdf6e905ab3bee4",
+      "union_order_independent": true,
+      "without_alice": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 7,
+          "region": "east",
+          "total": 7
+        }
+      ],
+      "without_bob": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 7,
+          "region": "east",
+          "total": 7
+        }
+      ],
+      "without_both": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 7,
+          "region": "east",
+          "total": 7
+        }
+      ]
+    },
+    {
+      "case": "L1_masked_event_promoted_after_replacement",
+      "gen1_output_alice_absent_yet_row_stored": true,
+      "gen1_withdraw_alice_unchanged": true,
+      "gen2_observed_promoted": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 9,
+          "region": "east",
+          "total": 9
+        }
+      ],
+      "gen2_oracle_withdraw_alice": [],
+      "masked_row_key": "ee3f2c5214c7dc35",
+      "same_content_row_key": true
+    },
+    {
+      "case": "R1_readded_owner_rows_stay_filtered",
+      "generation": 11,
+      "observed_current_code_still_serves_alice": true,
+      "oracle_filters_new_alice_row": true,
+      "oracle_result": [
+        {
+          "day": 0,
+          "devices": 1,
+          "maximum": 1,
+          "region": "__UNASSIGNED__",
+          "total": 1
+        }
+      ],
+      "readd_row_key": "d030e961b73011da"
+    }
+  ],
+  "layer": "OBSERVED+ORACLE"
+}
